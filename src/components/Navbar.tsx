@@ -22,7 +22,7 @@ function UserIcon() {
 
 export function Navbar() {
   return (
-    <header className="relative z-30 w-full bg-black px-6 py-4 md:px-10 lg:px-16">
+    <header className="fixed top-0 right-0 left-0 z-50 w-full bg-black/50 px-6 py-4 backdrop-blur-md md:px-10 lg:px-16">
       <nav className="mx-auto flex max-w-7xl items-center justify-between">
         <Link href="/" aria-label="LOTL Labs home">
           <Logo />

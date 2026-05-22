@@ -4,26 +4,37 @@ import { BestSection } from "@/components/BestSection";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { ServerExplorer } from "@/components/ServerExplorer";
 import { SpecsSection } from "@/components/SpecsSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <main className="min-h-screen">
       <Navbar />
       <Hero />
 
-      <div className="section-divider" />
-      <ServerExplorer />
+      <ScrollReveal>
+        <div className="section-divider" />
+        <ServerExplorer />
+      </ScrollReveal>
 
-      <SpecsSection />
+      <ScrollReveal delay={0.05}>
+        <SpecsSection />
+      </ScrollReveal>
 
-      <BenefitsSection />
+      <ScrollReveal delay={0.05}>
+        <BenefitsSection />
+      </ScrollReveal>
 
-      <BestSection />
-      <AxolotlSection />
+      <ScrollReveal delay={0.05}>
+        <BestSection />
+        <AxolotlSection />
+      </ScrollReveal>
 
-      <Footer />
-    </div>
+      <ScrollReveal>
+        <Footer />
+      </ScrollReveal>
+    </main>
   );
 }
