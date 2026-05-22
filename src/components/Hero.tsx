@@ -1,17 +1,27 @@
-export function HeroHeading() {
+export function Hero() {
   return (
-    <section className="relative px-6 pb-12 pt-10 md:px-10 md:pt-14 lg:px-16">
-      <div className="mx-auto max-w-4xl text-center">
-        <h1 className="font-serif text-4xl leading-tight text-white md:text-5xl lg:text-[3.5rem]">
-          Own Your Data.
+    <section className="hero-video relative flex min-h-[70vh] items-center justify-center overflow-hidden md:min-h-[80vh]">
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 h-full w-full object-cover"
+        aria-hidden="true"
+      >
+        <source src="/campfire-pc.mp4" type="video/mp4" />
+      </video>
+
+      <div className="hero-video__overlay absolute inset-0" aria-hidden="true" />
+
+      <div className="relative z-10 mx-auto max-w-5xl px-6 py-20 text-center md:px-10 md:py-28 lg:px-16">
+        <h1 className="hero-video__title text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+          Own Your Data
         </h1>
 
-        <div className="mx-auto my-6 h-px w-full max-w-3xl bg-white/90" />
-
-        <p className="mx-auto max-w-2xl font-serif text-xl leading-snug text-white md:text-2xl lg:text-[1.75rem]">
-          Fully Customizable AI Servers,
-          <br />
-          Personalized For You.
+        <p className="hero-video__subtitle mx-auto mt-8 max-w-2xl text-xl font-bold leading-snug md:mt-10 md:text-2xl lg:text-[1.75rem]">
+          Fully Customized AI Servers Personalized For You
         </p>
       </div>
     </section>

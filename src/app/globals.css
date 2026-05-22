@@ -1,20 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #0f0a1a;
+  --background: #1a1a1a;
   --foreground: #ffffff;
   --card: #e8d5d0;
-  --gradient-start: #1d4ed8;
-  --gradient-mid: #7c3aed;
-  --gradient-end: #db2777;
+  --hero: #edd5cf;
+  --section-dark: #2b2b2b;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
+  --color-hero: var(--hero);
   --font-sans: var(--font-inter);
-  --font-serif: var(--font-playfair);
 }
 
 * {
@@ -31,59 +30,49 @@ body {
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
-.font-serif {
-  font-family: var(--font-playfair), Georgia, serif;
+.hero-video {
+  background-color: #0f0a1a;
 }
 
-.video-wallpaper {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.video-wallpaper__media {
-  position: absolute;
-  inset: 0;
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-
-.video-wallpaper__overlay {
-  position: absolute;
-  inset: 0;
+.hero-video__overlay {
   background: linear-gradient(
     180deg,
-    rgba(15, 10, 26, 0.35) 0%,
-    rgba(15, 10, 26, 0.5) 100%
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.55) 100%
   );
 }
 
-.texture-bg {
-  background: linear-gradient(
-    180deg,
-    rgba(26, 15, 10, 0.45) 0%,
-    rgba(26, 15, 10, 0.55) 100%
-  );
+.hero-video__title {
+  color: #ffffff;
+  text-shadow:
+    0 2px 16px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(0, 0, 0, 0.5);
 }
 
-.texture-bg-pink {
-  background: linear-gradient(
-    180deg,
-    rgba(80, 20, 60, 0.35) 0%,
-    rgba(26, 15, 10, 0.5) 100%
-  );
+.hero-video__subtitle {
+  color: #e8e4f0;
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.75),
+    0 0 24px rgba(0, 0, 0, 0.4);
+}
+
+.section-dark {
+  background-color: var(--section-dark);
+}
+
+.section-divider {
+  height: 12px;
+  background-color: var(--section-dark);
 }
 
 .feature-bg {
   position: relative;
   background: linear-gradient(
     90deg,
-    rgba(29, 78, 216, 0.65) 0%,
-    rgba(124, 58, 237, 0.6) 45%,
-    rgba(219, 39, 119, 0.58) 100%
+    #1d4ed8 0%,
+    #7c3aed 50%,
+    #db2777 100%
   );
 }
 
@@ -92,22 +81,17 @@ body {
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.18) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
   background-size: 48px 48px;
   pointer-events: none;
 }
 
 .benefits-gradient {
   background: linear-gradient(
-    135deg,
-    rgba(91, 33, 182, 0.75) 0%,
-    rgba(99, 102, 241, 0.7) 45%,
-    rgba(124, 58, 237, 0.72) 100%
+    90deg,
+    #2563eb 0%,
+    #7c3aed 50%,
+    #db2777 100%
   );
-}
-
-.page-content {
-  position: relative;
-  z-index: 1;
 }

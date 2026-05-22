@@ -1,37 +1,29 @@
+import { AxolotlSection } from "@/components/AxolotlSection";
 import { BenefitsSection } from "@/components/BenefitsSection";
+import { BestSection } from "@/components/BestSection";
 import { Footer } from "@/components/Footer";
-import { HeroHeading } from "@/components/Hero";
-import { ServerExplorer } from "@/components/ServerExplorer";
+import { Hero } from "@/components/Hero";
 import { Navbar } from "@/components/Navbar";
+import { ServerExplorer } from "@/components/ServerExplorer";
 import { SpecsSection } from "@/components/SpecsSection";
-import { VideoWallpaper } from "@/components/VideoWallpaper";
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen">
-      <VideoWallpaper />
-
-      <div className="page-content min-h-screen">
+    <div className="min-h-screen">
       <Navbar />
+      <Hero />
 
-      <div className="texture-bg">
-        <HeroHeading />
-      </div>
-
+      <div className="section-divider" />
       <ServerExplorer />
 
-      <div className="texture-bg texture-bg-pink">
-        <SpecsSection />
-      </div>
+      <SpecsSection />
 
-      <div className="benefits-gradient">
-        <BenefitsSection />
-      </div>
+      <BenefitsSection />
 
-      <div className="texture-bg">
-        <Footer />
-      </div>
-      </div>
+      <BestSection />
+      <AxolotlSection />
+
+      <Footer />
     </div>
   );
 }

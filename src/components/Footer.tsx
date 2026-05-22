@@ -3,42 +3,45 @@ import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <footer
-      id="contact"
-      className="relative mt-8 border-t border-white/20 px-6 py-16 md:px-10 lg:px-16"
-    >
-      <div className="mx-auto flex max-w-7xl flex-col items-center text-center">
-        <Logo className="justify-center" />
-
-        <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
+    <footer id="contact" className="bg-black px-6 py-12 md:px-10 lg:px-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
+          <Logo />
           <Link
             id="purchase"
             href="#purchase"
-            className="min-w-[200px] rounded-full bg-gradient-to-r from-[#EC4899] via-[#8B5CF6] to-[#3B82F6] px-10 py-3.5 text-sm font-semibold text-white shadow-lg shadow-purple-500/25 transition hover:brightness-110"
+            className="rounded-full bg-gradient-to-r from-[#EC4899] via-[#8B5CF6] to-[#3B82F6] px-10 py-3 text-sm font-bold text-white shadow-lg transition hover:brightness-110"
           >
             Purchase
           </Link>
+        </div>
+
+        <div className="mt-10 flex min-h-[120px] items-center justify-center rounded-3xl bg-card px-8 py-10 md:min-h-[140px]">
+          <p className="text-center text-xl font-bold text-black md:text-2xl">
+            Placeholder certs
+          </p>
+        </div>
+
+        <div className="mt-10 flex flex-col items-center">
           <Link
             href="#contact"
-            className="min-w-[200px] rounded-full border border-white/40 px-10 py-3.5 text-sm font-semibold text-white transition hover:bg-white/10"
+            className="rounded-full border-2 border-white px-12 py-3 text-sm font-bold text-white transition hover:bg-white/10"
           >
             Contact Us
           </Link>
-        </div>
 
-        <div className="mt-12 flex flex-col items-center gap-2 text-xs text-white/50 md:flex-row md:gap-4">
-          <div className="flex gap-4">
-            <Link href="#" className="transition hover:text-white/80">
+          <div className="mt-8 flex gap-3 text-xs text-white/60">
+            <Link href="#" className="transition hover:text-white/90">
               Terms of Service
             </Link>
-            <span className="hidden md:inline">|</span>
-            <Link href="#" className="transition hover:text-white/80">
+            <span>|</span>
+            <Link href="#" className="transition hover:text-white/90">
               Privacy Policy
             </Link>
           </div>
-        </div>
 
-        <p className="mt-4 text-xs text-white/40">© 2024 Lotl Labs</p>
+          <p className="mt-4 text-xs text-white/50">© 2024 Lotl Labs</p>
+        </div>
       </div>
     </footer>
   );
