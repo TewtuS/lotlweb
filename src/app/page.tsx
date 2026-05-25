@@ -7,34 +7,38 @@ import { Navbar } from "@/components/Navbar";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ServerExplorer } from "@/components/ServerExplorer";
 import { SpecsSection } from "@/components/SpecsSection";
+import { VideoWallpaper } from "@/components/VideoWallpaper";
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
-      <Navbar />
-      <Hero />
+    <main className="relative min-h-screen">
+      <VideoWallpaper />
 
-      <ScrollReveal>
-        <div className="section-divider" />
-        <ServerExplorer />
-      </ScrollReveal>
+      <div className="page-content min-h-screen">
+        <Navbar />
+        <Hero />
 
-      <ScrollReveal delay={0.05}>
-        <SpecsSection />
-      </ScrollReveal>
+        <ScrollReveal>
+          <ServerExplorer />
+        </ScrollReveal>
 
-      <ScrollReveal delay={0.05}>
-        <BenefitsSection />
-      </ScrollReveal>
+        <ScrollReveal delay={0.05}>
+          <SpecsSection />
+        </ScrollReveal>
 
-      <ScrollReveal delay={0.05}>
-        <BestSection />
-        <AxolotlSection />
-      </ScrollReveal>
+        <ScrollReveal delay={0.05}>
+          <BenefitsSection />
+        </ScrollReveal>
 
-      <ScrollReveal>
-        <Footer />
-      </ScrollReveal>
+        <ScrollReveal delay={0.05}>
+          <BestSection />
+          <AxolotlSection />
+        </ScrollReveal>
+
+        <ScrollReveal>
+          <Footer />
+        </ScrollReveal>
+      </div>
     </main>
   );
 }

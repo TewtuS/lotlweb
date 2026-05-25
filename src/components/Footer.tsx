@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { pinkPanel } from "@/lib/styles";
 import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-black px-6 py-12 md:px-10 lg:px-16">
+    <footer id="contact" className="footer-glass px-6 py-12 md:px-10 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <Logo />
@@ -16,7 +17,9 @@ export function Footer() {
           </Link>
         </div>
 
-        <div className="mt-10 flex min-h-[120px] items-center justify-center rounded-3xl bg-card px-8 py-10 md:min-h-[140px]">
+        <div
+          className={`${pinkPanel} mt-10 flex min-h-[120px] items-center justify-center rounded-3xl px-8 py-10 md:min-h-[140px]`}
+        >
           <p className="text-center text-xl font-bold text-black md:text-2xl">
             Placeholder certs
           </p>

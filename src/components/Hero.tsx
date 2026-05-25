@@ -55,22 +55,8 @@ export function Hero() {
   return (
     <section
       ref={sectionRef}
-      className="hero-video relative h-screen w-full overflow-hidden"
+      className="relative h-screen w-full overflow-hidden"
     >
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        preload="auto"
-        className="absolute inset-0 h-full w-full object-cover"
-        aria-hidden="true"
-      >
-        <source src="/campfire-pc.mp4" type="video/mp4" />
-      </video>
-
-      <div className="hero-video__overlay absolute inset-0" aria-hidden="true" />
-
       <motion.div
         style={textStyle}
         className="relative z-10 mx-auto flex h-full w-full max-w-5xl flex-col justify-between px-6 pb-16 pt-24 text-center md:px-10 md:pb-20 md:pt-28 lg:px-16"

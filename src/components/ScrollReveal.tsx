@@ -22,9 +22,9 @@ export function ScrollReveal({
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.12 }}
+      initial={{ y: 48 }}
+      whileInView={{ y: 0 }}
+      viewport={{ once: true, amount: 0.08 }}
       transition={{
         duration: 0.65,
         delay,

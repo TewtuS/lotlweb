@@ -1,18 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #1a1a1a;
   --foreground: #ffffff;
-  --card: #e8d5d0;
-  --hero: #edd5cf;
-  --section-dark: #2b2b2b;
+  --lotl-pink: #febacb;
 }
 
 @theme inline {
-  --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-card: var(--card);
-  --color-hero: var(--hero);
+  --color-lotl-pink: #febacb;
   --font-sans: var(--font-inter);
 }
 
@@ -31,22 +26,56 @@ html {
 }
 
 body {
-  background: var(--background);
+  background: transparent;
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
 }
 
-.hero-video {
-  background-color: #0f0a1a;
+/* Pink panels — literal rgba so Tailwind never drops the variable */
+.lotl-pink-panel {
+  background-color: rgba(254, 186, 203, 0.75);
+  border: 1px solid rgba(254, 186, 203, 0.9);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
 }
 
-.hero-video__overlay {
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.45) 0%,
-    rgba(0, 0, 0, 0.35) 50%,
-    rgba(0, 0, 0, 0.55) 100%
-  );
+/* Fixed video behind entire page */
+.video-wallpaper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video-wallpaper__media {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.video-wallpaper__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.page-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Transparent sections — video fully visible */
+.section-clear {
+  background: transparent;
+}
+
+.text-on-video {
+  color: #ffffff;
+  text-shadow:
+    0 2px 12px rgba(0, 0, 0, 0.85),
+    0 0 32px rgba(0, 0, 0, 0.5);
 }
 
 .hero-video__title {
@@ -57,47 +86,18 @@ body {
 }
 
 .hero-video__subtitle {
-  color: #e8e4f0;
+  color: #f5f0f8;
   text-shadow:
     0 2px 12px rgba(0, 0, 0, 0.75),
     0 0 24px rgba(0, 0, 0, 0.4);
 }
 
-.section-dark {
-  background-color: var(--section-dark);
+.footer-glass {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(10px);
 }
 
-.section-divider {
-  height: 12px;
-  background-color: var(--section-dark);
-}
-
-.feature-bg {
-  position: relative;
-  background: linear-gradient(
-    90deg,
-    #1d4ed8 0%,
-    #7c3aed 50%,
-    #db2777 100%
-  );
-}
-
-.feature-bg::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.12) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
-  background-size: 48px 48px;
-  pointer-events: none;
-}
-
-.benefits-gradient {
-  background: linear-gradient(
-    90deg,
-    #2563eb 0%,
-    #7c3aed 50%,
-    #db2777 100%
-  );
+.glass-dark {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
 }

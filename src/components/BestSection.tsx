@@ -8,9 +8,9 @@ const cards = [
 
 export function BestSection() {
   return (
-    <section className="section-dark px-6 py-14 md:px-10 md:py-16 lg:px-16">
+    <section className="section-clear px-6 py-14 md:px-10 md:py-16 lg:px-16">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-center text-3xl font-bold leading-tight text-white md:text-4xl lg:text-[2.75rem]">
+        <h2 className="text-on-video text-center text-3xl font-bold leading-tight md:text-4xl lg:text-[2.75rem]">
           Give Yourself the Best
         </h2>
 
@@ -18,7 +18,7 @@ export function BestSection() {
           {cards.map((card, index) => (
             <div
               key={index}
-              className={`h-24 w-full max-w-[280px] rounded-xl bg-gradient-to-b from-[#EC4899] to-[#6366F1] shadow-xl md:h-28 md:max-w-[320px] ${card.offset}`}
+              className={`h-24 w-full max-w-[280px] rounded-xl bg-gradient-to-b from-[#EC4899]/75 to-[#6366F1]/75 shadow-xl backdrop-blur-sm md:h-28 md:max-w-[320px] ${card.offset}`}
               style={{ transform: `rotate(${card.rotate})` }}
             />
           ))}

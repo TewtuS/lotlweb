@@ -1,3 +1,5 @@
+import { pinkPanel } from "@/lib/styles";
+
 const specsCards = [
   { id: 1, hasText: false },
   { id: 2, hasText: true },
@@ -12,9 +14,9 @@ const placeholderText =
 
 export function SpecsSection() {
   return (
-    <section className="section-dark px-6 py-14 md:px-10 md:py-16 lg:px-16">
+    <section className="section-clear px-6 py-14 md:px-10 md:py-16 lg:px-16">
       <div className="mx-auto max-w-7xl">
-        <h2 className="text-left text-3xl font-bold leading-tight text-white md:text-4xl lg:text-[2.75rem]">
+        <h2 className="text-on-video text-left text-3xl font-bold leading-tight md:text-4xl lg:text-[2.75rem]">
           Your Server. Your Specs. Your Choice.
         </h2>
 
@@ -22,7 +24,7 @@ export function SpecsSection() {
           {specsCards.map((card) => (
             <div
               key={card.id}
-              className="flex min-h-[200px] items-center justify-center rounded-3xl bg-card p-6 shadow-md md:min-h-[240px]"
+              className={`${pinkPanel} flex min-h-[200px] items-center justify-center rounded-3xl p-6 md:min-h-[240px]`}
             >
               {card.hasText && (
                 <p className="text-center text-base font-bold leading-relaxed text-black md:text-lg">
