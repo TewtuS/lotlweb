@@ -3,6 +3,7 @@
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import { defaultPart, serverParts, type ServerPart } from "@/data/server-parts";
+import { darkPanel, pinkPanel } from "@/lib/styles";
 import { PartInfoCard } from "./PartInfoCard";
 
 const ServerModel3D = dynamic(
@@ -10,7 +11,9 @@ const ServerModel3D = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="glass-dark flex h-full items-center justify-center rounded-[1.75rem]">
+      <div
+        className={`${darkPanel} flex h-full items-center justify-center rounded-[1.75rem]`}
+      >
         <p className="text-sm text-white/40">Loading 3D model…</p>
       </div>
     ),
@@ -50,11 +53,15 @@ export function ServerExplorer() {
   const [selectedPart, setSelectedPart] = useState<ServerPart>(defaultPart);
 
   return (
-    <section className="section-clear relative px-6 py-10 md:px-10 md:py-14 lg:px-16">
+    <section
+      className={`${pinkPanel} relative px-6 py-10 md:px-10 md:py-14 lg:px-16`}
+    >
       <div className="relative mx-auto max-w-6xl">
         <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-12 md:gap-6">
           <div className="relative md:col-span-7">
-            <div className="glass-dark relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[1.75rem] shadow-2xl md:mx-0 md:aspect-auto md:h-[440px] md:max-w-none">
+            <div
+              className={`${darkPanel} relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-[1.75rem] shadow-2xl md:mx-0 md:aspect-auto md:h-[440px] md:max-w-none`}
+            >
               <ServerModel3D
                 parts={serverParts}
                 selectedId={selectedPart.id}

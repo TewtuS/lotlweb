@@ -92,12 +92,7 @@ body {
     0 0 24px rgba(0, 0, 0, 0.4);
 }
 
-.footer-glass {
-  background: rgba(0, 0, 0, 0.35);
-  backdrop-filter: blur(10px);
-}
-
-.glass-dark {
-  background: rgba(0, 0, 0, 0.35);
+.footer-dark {
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(8px);
 }

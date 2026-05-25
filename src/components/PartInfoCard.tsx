@@ -1,7 +1,7 @@
 "use client";
 
 import type { ServerPart } from "@/data/server-parts";
-import { pinkPanel } from "@/lib/styles";
+import { creamPanel, greyPanel } from "@/lib/styles";
 
 type PartInfoCardProps = {
   part: ServerPart;
@@ -9,8 +9,10 @@ type PartInfoCardProps = {
 
 export function PartInfoCard({ part }: PartInfoCardProps) {
   return (
-    <div className={`${pinkPanel} overflow-hidden rounded-2xl shadow-2xl`}>
-      <div className="flex h-28 items-center justify-center md:h-32">
+    <div className="overflow-hidden rounded-2xl shadow-2xl backdrop-blur-sm">
+      <div
+        className={`${greyPanel} flex h-28 items-center justify-center md:h-32`}
+      >
         <div
           className="flex h-20 w-32 flex-col items-center justify-center gap-1 rounded-lg border border-white/20 md:h-24 md:w-36"
           style={{
@@ -29,11 +31,11 @@ export function PartInfoCard({ part }: PartInfoCardProps) {
         </div>
       </div>
 
-      <div className="border-t border-[rgba(254,186,203,0.9)] px-5 py-5 md:px-6 md:py-6">
-        <h3 className="text-sm font-bold text-black md:text-base">
+      <div className={`${creamPanel} px-5 py-5 md:px-6 md:py-6`}>
+        <h3 className="text-sm font-bold text-[#111827] md:text-base">
           {part.name}
         </h3>
-        <p className="mt-2 text-sm leading-relaxed text-black/80 md:text-[15px]">
+        <p className="mt-2 text-sm leading-relaxed text-[#4B5563] md:text-[15px]">
           {part.description}
         </p>
       </div>

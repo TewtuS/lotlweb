@@ -4,7 +4,7 @@ import { Logo } from "./Logo";
 
 export function Footer() {
   return (
-    <footer id="contact" className="footer-glass px-6 py-12 md:px-10 lg:px-16">
+    <footer id="contact" className="footer-dark px-6 py-12 md:px-10 lg:px-16">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
           <Logo />
